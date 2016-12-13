@@ -1,6 +1,6 @@
 {
   "name": "mock-schema",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The best way to generate fake data to work with your components.",
   "main": "index.js",
   "scripts": {
@@ -10,12 +10,11 @@
   "author": "Luis Vinicius <luis@startamus.com.br>",
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-es2015-rollup": "^1.2.0",
-    "rollup": "^0.37.0",
-    "rollup-plugin-babel": "^2.6.1",
-    "rollup-plugin-commonjs": "^5.0.5",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-uglify": "^1.0.1",
-    "webpack": "^1.14.0"
+    "babel-preset-es2015-script": "^1.1.0",
+    "grunt": "latest",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "time-grunt": "^1.4.0"
   }
 }
