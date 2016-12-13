@@ -1,13 +1,13 @@
 # mockschema
 
-[![npm package](https://img.shields.io/badge/npm-v0.0.4-blue.svg)](https://www.npmjs.com/package/mock-schema)
+[![npm package](https://img.shields.io/badge/npm-v0.0.4-blue.svg)](https://www.npmjs.com/package/mockschema)
 
 > The best way to generate fake data to work with your components.
 
 ---
 
 ### Why you need use?
- * Tiny size: 700 bytes
+ * Tiny size: ~1kb
  * Save time
  * Increase productivity
 
@@ -19,7 +19,7 @@ create a lot of objects, variables... You just use the ```mock``` function, and 
 
 #### Install
 
-Npm: `npm install mockschema`
+Npm: `npm install mockschema` </br>
 CDN: `https://unpkg.com/mockschema@0.0.4`
 
 #### Real life example:
@@ -31,7 +31,7 @@ import Appbar from 'preact-mui/lib/appbar';
 import Button from 'preact-mui/lib/button';
 import Container from 'preact-mui/lib/container';
 
-import { mock, createSchema } from 'mock-schema';
+import { mock, createSchema } from 'mockschema';
 
 createSchema({
   person: {
@@ -78,7 +78,7 @@ render(<Example />, document.getElementById('example'));
  */
  
 // store/index.js
-import {createSchema} from 'mock-schema';
+import {createSchema} from 'mockschema';
 
 createSchema({
   posts: {
@@ -94,7 +94,7 @@ createSchema({
 ```
 
 Generate your Schema
- * Always return an array with the quantity of objects passed in the function. The ```id```` attribute will be incremented automaticaly by mock-schema.
+ * Always return an array with the quantity of objects passed in the function. The ```id``` attribute will be incremented automaticaly by mockschema.
 
 ```javascript
 /**
