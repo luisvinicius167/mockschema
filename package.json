@@ -2,7 +2,7 @@
   "name": "mockschema",
   "version": "0.0.3",
   "description": "The best way to generate fake data to work with your components.",
-  "main": "dist/mock-schema.min.js",
+  "main": "dist/mockschema.min.js",
   "scripts": {
     "build": "grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
