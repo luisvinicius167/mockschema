@@ -1,6 +1,6 @@
-# mock-schema
+# mockschema
 
-[![npm package](https://img.shields.io/badge/npm-v0.0.2-blue.svg)](https://www.npmjs.com/package/mock-schema)
+[![npm package](https://img.shields.io/badge/npm-v0.0.3-blue.svg)](https://www.npmjs.com/package/mock-schema)
 
 > The best way to generate fake data to work with your components.
 
@@ -19,8 +19,8 @@ create a lot of objects, variables... You just use the ```mock``` function, and 
 
 #### Install
 
-`npm install mock-schema`
-
+Npm: `npm install mockschema`
+CDN: `https://unpkg.com/mockschema@0.0.3`
 
 #### Real life example:
 
