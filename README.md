@@ -7,7 +7,7 @@
 ---
 
 ### Why you need use?
- * Tiny size: 700 bytes
+ * Tiny size: ~1kb
  * Save time
  * Increase productivity
 
