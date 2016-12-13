@@ -15,11 +15,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     root.MockSchema = factory;
   }
 })(this, function (global) {
+  /**
+  * @private
+  * @name _schema
+  * @description The structure of schema
+  */
+  var _schema = {};
 
   /**
-   * @name createDumbArray
-   * @description create an Array with determined Length
-   */
+  * @name createDumbArray
+  * @description create an Array with determined Length
+  */
   function createDumbArray(len) {
     var dumbArray = [];
     for (var i = 0; i < len; i++) {
@@ -29,11 +35,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 
   /**
-   * @name createSchema
-   * @description function to create the mock structure
-   * @example
-   * createSchema({person: {id, name, age});
-   */
+  * @name createStructure
+  * @description function for create the Schema Structure
+  */
   function createStructure(obj, times) {
     var mocked = [];
     createDumbArray(times).forEach(function (name, index) {
@@ -45,30 +49,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 
   /**
-   * @private
-   * @name _schema
-   * @description The structure of schema
-   */
-  var _schema = {};
-
-  /**
-   * @name createSchema
-   * @param {Object} schema The schema
-   * @return void 0
-   */
+  * @name createSchema
+  * @param {Object} schema The Schema model
+  * @return void 0
+  */
   function createSchema(schema) {
     Object.assign(_schema, schema);
   }
 
   /**
-   * @name mock
-   * @description always return an array with the schema structure
-   */
-  function mock(entitie, quantity) {
+  * @name mock
+  * @description always return an array with the Schema structure
+  * @param {Object|String} The Schema Model
+  * @param quantity The quantity of objects that will be returned
+  * @return {Array}
+  */
+  function mock(schema, quantity) {
     var _strucuture = void 0,
         mockedData = {};
 
-    typeof entitie === "string" ? _strucuture = _schema[entitie] : _strucuture = entitie;
+    typeof schema === "string" ? _strucuture = _schema[schema] : _strucuture = schema;
 
     for (var key in _strucuture) {
       var value = _strucuture[key];
@@ -77,9 +77,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return createStructure(mockedData, quantity);
   };
 
-  return {
-    mock: mock,
-    createSchema: createSchema
-  };
+  return { mock: mock, createSchema: createSchema };
 }(this));
-//# sourceMappingURL=mock-schema.js.map
+//# sourceMappingURL=mockschema.js.map
