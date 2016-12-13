@@ -41,7 +41,7 @@ createSchema({
   }
 })
 
-class Example extends React.Component {
+class Example extends Component {
   render() {
     return (
       <div>
