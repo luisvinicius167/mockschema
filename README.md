@@ -1,6 +1,6 @@
 # mock-schema
 
-[![npm package](https://img.shields.io/badge/npm-v0.0.1-blue.svg)](https://www.npmjs.com/package/mock-schema)
+[![npm package](https://img.shields.io/badge/npm-v0.0.2-blue.svg)](https://www.npmjs.com/package/mock-schema)
 
 > The best way to generate fake data to work with your components.
 
