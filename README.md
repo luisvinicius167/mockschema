@@ -6,15 +6,14 @@
 
 ---
 
-### Why you need use?
+### Why should you use Mock Schema?
  * Tiny size: ~1kb
  * Save time
  * Increase productivity
 
 
-### How it works?
-When you work with Components, sometimes you don't have API yet, but you need to put some data, like an Array with Objects for your component show, simulating your API data. With Mock Schema, you don't need
-create a lot of objects, variables... You just use the ```mock``` function, and the schema will be returned.
+### How does it work?
+When you work with Components, sometimes you don't have an API yet, but you need to populate your components with some data, like an Array of Objects. With Mock Schema, you don't need create a lot of objects manually, you just use the ```mock``` function, and the schema you define will be returned.
 
 
 #### Install
@@ -36,7 +35,7 @@ import { mock, createSchema } from 'mockschema';
 createSchema({
   person: {
     id:0, 
-    name:'Jhon Dow', 
+    name:'John Doe', 
     age: 25
   }
 })
@@ -48,8 +47,8 @@ class Example extends Component {
         <Appbar></Appbar>
         <Container fluid={true}>
         {/** 
-          * mock will return an Array with 10 object
-          * the id will auto incremented by mock
+          * mock will return an Array with 10 objects
+          * the id will be auto incremented for you
           */}
           {mock('person', 10).map( person => (
             <div>{person.id} {person.name}</div>
@@ -84,7 +83,7 @@ createSchema({
   posts: {
     id: '1',
     title: 'Foo Bar',
-    author: 'Jhon Doe'
+    author: 'John Doe'
   },
   animals: {
     id: 1,
@@ -94,7 +93,7 @@ createSchema({
 ```
 
 Generate your Schema
- * Always return an array with the quantity of objects passed in the function. The ```id``` attribute will be incremented automaticaly by mockschema.
+ * Always return an array with the quantity of objects passed in the function. The ```id``` attribute will be incremented automatically by Mock Schema.
 
 ```javascript
 /**
@@ -108,10 +107,10 @@ Generate your Schema
 // state/index.js
 import { mock } from 'mock-schema';
 
-// If you create a Schema, you just use
+// If you create a Schema, you can use it like this
 mock('posts', 5); // -> [{id:1, title: 'Foo Bar', author: 'Jhon Doe'}, {id:2, title: 'Foo Bar', author: 'Jhon Doe'}, ...]
 
-// Or, you can pass Objects instead
-mock({ name: 'Jhon Doe', type: 'Person'}, 5); // -> [{id:1, name:'Jhon Doe', type: 'Person'}, {id:2, name:'Jhon Doe', type: 'Person'}, ...]
+// Or, you can pass mock an Object instead like this
+mock({ name: 'John Doe', type: 'Person'}, 5); // -> [{id:1, name:'John Doe', type: 'Person'}, {id:2, name:'John Doe', type: 'Person'}, ...]
 
 ```
