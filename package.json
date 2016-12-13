@@ -1,0 +1,21 @@
+{
+  "name": "mock-schema",
+  "version": "0.0.1",
+  "description": "The best way to generate fake data to work with your components.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Vinicius <luis@startamus.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "rollup": "^0.37.0",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "webpack": "^1.14.0"
+  }
+}
