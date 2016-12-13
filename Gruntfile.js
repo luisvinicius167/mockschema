@@ -9,14 +9,14 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/mock-schema.js': 'src/mock-schema.js'
+          'dist/mockschema.js': 'src/mockschema.js'
         }
       }
     },
     uglify: {
       my_target: {
         files: {
-          'dist/mock-schema.min.js': ['dist/mock-schema.js']
+          'dist/mockschema.min.js': ['dist/mockschema.js']
         }
       },
     },
