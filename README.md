@@ -7,7 +7,7 @@
 ---
 
 ### Why should you use Mock Schema?
- * Tiny size: ~1kb
+ * Very simple API
  * Save time
  * Increase productivity
 
