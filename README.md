@@ -13,7 +13,7 @@
 
 
 ### How does it work?
-When you work with Components, sometimes you don't have an API yet, but you need to populate your components with some data, like an Array of Objects. With Mock Schema, you don't need create a lot of objects manually, you just use the ```mock``` function, and the schema you define will be returned.
+When you work with Components, sometimes you don't have an API yet, but you need to populate your components with some data, like an Array of Objects. With Mock Schema, you don't need create a lot of objects manually, you just use the ```mock``` function, and the schema that you define will be returned.
 
 
 #### Install
@@ -38,7 +38,7 @@ const partys = mock({
   invited: mock('person', 100) // or mock({name:'John Doe', age: 25}, 100);
 }, 5);
 
-console.log(party); 
+console.log(partys); 
 /**
  * [{ 
  *  id: 0, name: 
