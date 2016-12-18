@@ -1,6 +1,6 @@
 # mockschema
 
-[![npm package](https://img.shields.io/badge/npm-v0.0.4-blue.svg)](https://www.npmjs.com/package/mockschema)
+[![npm package](https://img.shields.io/badge/npm-v0.0.5-blue.svg)](https://www.npmjs.com/package/mockschema)
 
 > The best way to generate fake data to work with your components.
 
@@ -19,7 +19,45 @@ When you work with Components, sometimes you don't have an API yet, but you need
 #### Install
 
 Npm: `npm install mockschema` </br>
-CDN: `https://unpkg.com/mockschema@0.0.4`
+CDN: `https://unpkg.com/mockschema@0.0.5`
+
+
+#### The Gist:
+```javascript
+import { mock } from 'mockschema';
+
+createSchema({
+  person: { 
+    name:'John Doe', 
+    age: 25
+  }
+});
+
+const partys = mock({
+  name: 'Cool Party',
+  invited: mock('person', 100) // or mock({name:'John Doe', age: 25}, 100);
+}, 5);
+
+console.log(party); 
+/**
+ * [{ 
+ *  id: 0, name: 
+ *  'Cool Party', 
+ *  invited: [
+ *   {
+ *     id: 0, 
+ *     name: 'Jhon Doe', 
+ *     age:25
+ *   }, 
+ *   {
+ *    id: 1, 
+ *    name: 'Jhon Doe', 
+ *    age:25
+ *   }... {id: 99, name: 'Jhon Doe', age:25}]
+ * }, {...},{...},{...},{...}];
+ */
+
+```
 
 #### Real life example:
 
@@ -38,7 +76,7 @@ createSchema({
     name:'John Doe', 
     age: 25
   }
-})
+});
 
 class Example extends Component {
   render() {
