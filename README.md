@@ -24,7 +24,7 @@ CDN: `https://unpkg.com/mockschema@0.0.5`
 
 #### The Gist:
 ```javascript
-import { mock } from 'mockschema';
+import { mock, createSchema } from 'mockschema';
 
 createSchema({
   person: { 
