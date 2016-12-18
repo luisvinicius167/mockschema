@@ -10,6 +10,7 @@
   "author": "Luis Vinicius <luis@startamus.com.br>",
   "license": "MIT",
   "devDependencies": {
+    "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-preset-es2015-script": "^1.1.0",
     "grunt": "latest",
     "grunt-babel": "^6.0.0",

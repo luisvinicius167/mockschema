@@ -1,3 +1,5 @@
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -41,7 +43,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   function createStructure(obj, times) {
     var mocked = [];
     createDumbArray(times).forEach(function (name, index) {
-      var _mock = Object.assign({}, obj);
+      var _mock = _extends({}, obj);
       _mock.id = index;
       mocked.push(_mock);
     });
@@ -54,7 +56,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   * @return void 0
   */
   function createSchema(schema) {
-    Object.assign(_schema, schema);
+    _extends(_schema, schema);
   }
 
   /**
@@ -72,7 +74,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     for (var key in _strucuture) {
       var value = _strucuture[key];
-      Object.assign(mockedData, _defineProperty({}, key, value));
+      _extends(mockedData, _defineProperty({}, key, value));
     }
     return createStructure(mockedData, quantity);
   };

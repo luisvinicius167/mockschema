@@ -5,7 +5,8 @@ module.exports = function (grunt) {
     babel: {
       options: {
         sourceMap: true,
-        presets: ['babel-preset-es2015-script']
+        presets: ['babel-preset-es2015-script'],
+        plugins: ["transform-object-assign"]
       },
       dist: {
         files: {
